@@ -2,7 +2,10 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class Day4 {
     private final String filePath;
@@ -51,13 +54,18 @@ public class Day4 {
             int middleLetter = wordByLetters.length / 2;
             for (int i = 0; i < letters.size(); i++) {
                 for (int j = 0; j < letters.get(i).length; j++) {
-                    if (wordByLetters[0] == letters.get(i)[j]) {
-                        for (int[] shift : shifts) {
-                            if (!isX || (shift[0] != 0 && shift[1] != 0)) {
-                                if (checkWord(wordByLetters, 1, i + shift[0], j + shift[1], shift[0], shift[1])) {
-                                    String middleCoordinates = (i + middleLetter * shift[0]) + ":" + (j + middleLetter * shift[1]);
-                                    middleCoordinatesCounts.compute(middleCoordinates, (k, v) -> v == null ? 1 : v + 1);
+                    for (int[] shift : shifts) {
+                        if (!isX || (shift[0] != 0 && shift[1] != 0)) {
+                            boolean isFound = true;
+                            for (int l = 0; l < wordByLetters.length; l++) {
+                                if (!checkLetter(wordByLetters[l], i + shift[0] * l, j + shift[1] * l)) {
+                                    isFound = false;
+                                    break;
                                 }
+                            }
+                            if (isFound) {
+                                String middleCoordinates = (i + middleLetter * shift[0]) + ":" + (j + middleLetter * shift[1]);
+                                middleCoordinatesCounts.compute(middleCoordinates, (k, v) -> v == null ? 1 : v + 1);
                             }
                         }
                     }
@@ -67,17 +75,6 @@ public class Day4 {
         return isX ?
                 middleCoordinatesCounts.values().stream().filter(v -> v == (isPalindrome ? 4 : 2)).mapToInt(v -> 1).sum() :
                 middleCoordinatesCounts.values().stream().mapToInt(v -> v).sum() / (isPalindrome ? 2 : 1);
-    }
-
-    public boolean checkWord(char[] wordByLetters, int currentLetter, int i, int j, int iShift, int jShift) {
-        if (checkLetter(wordByLetters[currentLetter], i, j)) {
-            if (currentLetter == wordByLetters.length - 1) {
-                return true;
-            } else {
-                return checkWord(wordByLetters, ++currentLetter, i + iShift, j + jShift, iShift, jShift);
-            }
-        }
-        return false;
     }
 
     public boolean checkLetter(char letter, int i, int j) {
