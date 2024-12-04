@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.IntStream;
 
 public class Day2 {
     private final String filePath;
@@ -33,36 +34,38 @@ public class Day2 {
     }
 
     public int safeReportsCount() {
-        return safeReportsCount(0);
+        return safeReportsCount(false);
     }
 
-    public int safeReportsCount(int errorCount) {
+    public int safeReportsCount(boolean isDumperOn) {
         int result = 0;
         for (List<Integer> report : reports) {
-            Integer prev = null;
-            Boolean isIncrease = null;
-            boolean isSafe = true;
-            int errorCountCheck = errorCount;
-            for (Integer number : report) {
-                if (prev != null) {
-                    if (number.equals(prev) || Math.abs(number - prev) > 3) {
-                        if (errorCountCheck-- <= 0) {
-                            isSafe = false;
-                            break;
-                        }
-                    } else if (isIncrease == null) {
-                        isIncrease = number > prev;
-                    } else if ((isIncrease && number < prev) || (!isIncrease && number > prev)) {
-                        if (errorCountCheck-- <= 0) {
-                            isSafe = false;
-                            break;
-                        }
-                    }
-                }
-                prev = number;
+            if (isReportSafe(report) || (isDumperOn && IntStream.range(0, report.size()).anyMatch(i -> {
+                List<Integer> newReport = new ArrayList<>(report);
+                newReport.remove(i);
+                return isReportSafe(newReport);
+            }))) {
+                result++;
             }
-            if (isSafe) result++;
         }
         return result;
+    }
+
+    public boolean isReportSafe(List<Integer> report) {
+        Integer prev = null;
+        Boolean isIncrease = null;
+        for (Integer number : report) {
+            if (prev != null) {
+                if (number.equals(prev) || Math.abs(number - prev) > 3) {
+                    return false;
+                } else if (isIncrease == null) {
+                    isIncrease = number > prev;
+                } else if ((isIncrease && number < prev) || (!isIncrease && number > prev)) {
+                    return false;
+                }
+            }
+            prev = number;
+        }
+        return true;
     }
 }
