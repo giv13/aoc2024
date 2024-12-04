@@ -44,7 +44,9 @@ public class Day4 {
                 new int[]{0, -1},
                 new int[]{1, -1}
         ));
-        char[] wordByLetters = word.toUpperCase().toCharArray();
+        word = word.toUpperCase();
+        char[] wordByLetters = word.toCharArray();
+        boolean isPalindrome = new StringBuilder(word).reverse().toString().equals(word);
         if (!isX || wordByLetters.length % 2 != 0) {
             int middleLetter = wordByLetters.length / 2;
             for (int i = 0; i < letters.size(); i++) {
@@ -63,8 +65,8 @@ public class Day4 {
             }
         }
         return isX ?
-                middleCoordinatesCounts.values().stream().filter(v -> v == 2).mapToInt(v -> 1).sum() :
-                middleCoordinatesCounts.values().stream().mapToInt(v -> v).sum();
+                middleCoordinatesCounts.values().stream().filter(v -> v == (isPalindrome ? 4 : 2)).mapToInt(v -> 1).sum() :
+                middleCoordinatesCounts.values().stream().mapToInt(v -> v).sum() / (isPalindrome ? 2 : 1);
     }
 
     public boolean checkWord(char[] wordByLetters, int currentLetter, int i, int j, int iShift, int jShift) {
