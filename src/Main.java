@@ -12,8 +12,12 @@ public class Main {
         //System.out.println("Day 3/1: " + day3.multiplications("(mul)\\((\\d+),(\\d+)\\)"));
         //System.out.println("Day 3/2: " + day3.multiplications("(mul(?=\\(\\d+,\\d+\\))|do|don't)\\((?:(\\d+),(\\d+))?\\)"));
 
-        Day4 day4 = new Day4("files/day4.txt");
-        System.out.println("Day 4/1: " + day4.wordCount("xmas"));
-        System.out.println("Day 4/2: " + day4.wordCount("mas", true));
+        //Day4 day4 = new Day4("files/day4.txt");
+        //System.out.println("Day 4/1: " + day4.wordCount("xmas"));
+        //System.out.println("Day 4/2: " + day4.wordCount("mas", true));
+
+        Day5 day5 = new Day5("files/day5.txt");
+        System.out.println("Day 5/1: " + day5.sumMiddleNumbers());
+        System.out.println("Day 5/2: " + day5.sumMiddleNumbers(true));
     }
 }
