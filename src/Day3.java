@@ -25,9 +25,9 @@ public class Day3 {
             }
             reader.close();
         } catch (FileNotFoundException e) {
-            System.out.println("Файл не найден!");
+            System.out.println("File not found!");
         } catch (IOException e) {
-            System.out.println("Ошибка ввода/вывода!");
+            System.out.println("I/O error!");
         }
     }
 

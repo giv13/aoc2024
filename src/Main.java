@@ -16,8 +16,12 @@ public class Main {
         //System.out.println("Day 4/1: " + day4.wordCount("xmas"));
         //System.out.println("Day 4/2: " + day4.wordCount("mas", true));
 
-        Day5 day5 = new Day5("files/day5.txt");
-        System.out.println("Day 5/1: " + day5.sumMiddleNumbers());
-        System.out.println("Day 5/2: " + day5.sumMiddleNumbers(true));
+        //Day5 day5 = new Day5("files/day5.txt");
+        //System.out.println("Day 5/1: " + day5.sumMiddleNumbers());
+        //System.out.println("Day 5/2: " + day5.sumMiddleNumbers(true));
+
+        Day6 day6 = new Day6("files/day6.txt");
+        System.out.println("Day 6/1: " + day6.countPositions());
+        System.out.println("Day 6/2: " + day6.countPositions(true));
     }
 }
