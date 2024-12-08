@@ -20,8 +20,12 @@ public class Main {
         //System.out.println("Day 5/1: " + day5.sumMiddleNumbers());
         //System.out.println("Day 5/2: " + day5.sumMiddleNumbers(true));
 
-        Day6 day6 = new Day6("files/day6.txt");
-        System.out.println("Day 6/1: " + day6.countPositions());
-        System.out.println("Day 6/2: " + day6.countPositions(true));
+        //Day6 day6 = new Day6("files/day6.txt");
+        //System.out.println("Day 6/1: " + day6.countPositions());
+        //System.out.println("Day 6/2: " + day6.countPositions(true));
+
+        Day7 day7 = new Day7("files/day7.txt");
+        System.out.println("Day 7/1: " + day7.calibrationResult());
+        System.out.println("Day 7/2: " + day7.calibrationResult(true));
     }
 }
