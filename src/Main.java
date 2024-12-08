@@ -24,8 +24,12 @@ public class Main {
         //System.out.println("Day 6/1: " + day6.countPositions());
         //System.out.println("Day 6/2: " + day6.countPositions(true));
 
-        Day7 day7 = new Day7("files/day7.txt");
-        System.out.println("Day 7/1: " + day7.calibrationResult());
-        System.out.println("Day 7/2: " + day7.calibrationResult(true));
+        //Day7 day7 = new Day7("files/day7.txt");
+        //System.out.println("Day 7/1: " + day7.calibrationResult());
+        //System.out.println("Day 7/2: " + day7.calibrationResult(true));
+
+        Day8 day8 = new Day8("files/day8.txt");
+        System.out.println("Day 8/1: " + day8.countAntinodes());
+        System.out.println("Day 8/2: " + day8.countAntinodes(true));
     }
 }
