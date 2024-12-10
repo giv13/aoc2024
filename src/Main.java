@@ -32,8 +32,12 @@ public class Main {
         //System.out.println("Day 8/1: " + day8.countAntinodes());
         //System.out.println("Day 8/2: " + day8.countAntinodes(true));
 
-        Day9 day9 = new Day9("files/day9.txt");
-        System.out.println("Day 9/1: " + day9.fileBlocksChecksum());
-        System.out.println("Day 9/2: " + day9.filesChecksum());
+        //Day9 day9 = new Day9("files/day9.txt");
+        //System.out.println("Day 9/1: " + day9.fileBlocksChecksum());
+        //System.out.println("Day 9/2: " + day9.filesChecksum());
+
+        Day10 day10 = new Day10("files/day10.txt");
+        System.out.println("Day 10/1: " + day10.trailheadsSum());
+        System.out.println("Day 10/2: " + day10.trailheadsSum(true));
     }
 }
