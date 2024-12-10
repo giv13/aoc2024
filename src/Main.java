@@ -28,8 +28,12 @@ public class Main {
         //System.out.println("Day 7/1: " + day7.calibrationResult());
         //System.out.println("Day 7/2: " + day7.calibrationResult(true));
 
-        Day8 day8 = new Day8("files/day8.txt");
-        System.out.println("Day 8/1: " + day8.countAntinodes());
-        System.out.println("Day 8/2: " + day8.countAntinodes(true));
+        //Day8 day8 = new Day8("files/day8.txt");
+        //System.out.println("Day 8/1: " + day8.countAntinodes());
+        //System.out.println("Day 8/2: " + day8.countAntinodes(true));
+
+        Day9 day9 = new Day9("files/day9.txt");
+        System.out.println("Day 9/1: " + day9.fileBlocksChecksum());
+        System.out.println("Day 9/2: " + day9.filesChecksum());
     }
 }
