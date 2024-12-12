@@ -36,8 +36,12 @@ public class Main {
         //System.out.println("Day 9/1: " + day9.fileBlocksChecksum());
         //System.out.println("Day 9/2: " + day9.filesChecksum());
 
-        Day10 day10 = new Day10("files/day10.txt");
-        System.out.println("Day 10/1: " + day10.trailheadsSum());
-        System.out.println("Day 10/2: " + day10.trailheadsSum(true));
+        //Day10 day10 = new Day10("files/day10.txt");
+        //System.out.println("Day 10/1: " + day10.trailheadsSum());
+        //System.out.println("Day 10/2: " + day10.trailheadsSum(true));
+
+        Day11 day11 = new Day11("files/day11.txt");
+        System.out.println("Day 11/1: " + day11.countNumbers(25));
+        System.out.println("Day 11/2: " + day11.countNumbers(75));
     }
 }
