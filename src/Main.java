@@ -40,8 +40,12 @@ public class Main {
         //System.out.println("Day 10/1: " + day10.trailheadsSum());
         //System.out.println("Day 10/2: " + day10.trailheadsSum(true));
 
-        Day11 day11 = new Day11("files/day11.txt");
-        System.out.println("Day 11/1: " + day11.countNumbers(25));
-        System.out.println("Day 11/2: " + day11.countNumbers(75));
+        //Day11 day11 = new Day11("files/day11.txt");
+        //System.out.println("Day 11/1: " + day11.countNumbers(25));
+        //System.out.println("Day 11/2: " + day11.countNumbers(75));
+
+        Day12 day12 = new Day12("files/day12.txt");
+        System.out.println("Day 12/1: " + day12.getPrice());
+        System.out.println("Day 12/1: " + day12.getPrice(true));
     }
 }
