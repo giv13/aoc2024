@@ -48,10 +48,14 @@ public class Main {
 
         //Day12 day12 = new Day12("files/day12.txt");
         //System.out.println("Day 12/1: " + day12.getPrice());
-        //System.out.println("Day 12/1: " + day12.getPrice(true));
+        //System.out.println("Day 12/2: " + day12.getPrice(true));
 
-        Day13 day13 = new Day13("files/day13.txt");
-        System.out.println("Day 13/1: " + day13.countTokens());
-        System.out.println("Day 13/1: " + day13.countTokens(10000000000000L));
+        //Day13 day13 = new Day13("files/day13.txt");
+        //System.out.println("Day 13/1: " + day13.countTokens());
+        //System.out.println("Day 13/2: " + day13.countTokens(10000000000000L));
+
+        Day14 day14 = new Day14("files/day14.txt");
+        System.out.println("Day 14/1: " + day14.getSafetyFactor(101, 103, 100));
+        System.out.println("Day 14/2: " + day14.findEasterEgg(101, 103));
     }
 }
