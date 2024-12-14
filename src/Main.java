@@ -1,3 +1,5 @@
+import java.math.BigDecimal;
+
 public class Main {
     public static void main(String[] args) {
         //Day1 day1 = new Day1("files/day1.txt");
@@ -44,8 +46,12 @@ public class Main {
         //System.out.println("Day 11/1: " + day11.countNumbers(25));
         //System.out.println("Day 11/2: " + day11.countNumbers(75));
 
-        Day12 day12 = new Day12("files/day12.txt");
-        System.out.println("Day 12/1: " + day12.getPrice());
-        System.out.println("Day 12/1: " + day12.getPrice(true));
+        //Day12 day12 = new Day12("files/day12.txt");
+        //System.out.println("Day 12/1: " + day12.getPrice());
+        //System.out.println("Day 12/1: " + day12.getPrice(true));
+
+        Day13 day13 = new Day13("files/day13.txt");
+        System.out.println("Day 13/1: " + day13.countTokens());
+        System.out.println("Day 13/1: " + day13.countTokens(10000000000000L));
     }
 }
