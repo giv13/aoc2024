@@ -54,8 +54,12 @@ public class Main {
         //System.out.println("Day 13/1: " + day13.countTokens());
         //System.out.println("Day 13/2: " + day13.countTokens(10000000000000L));
 
-        Day14 day14 = new Day14("files/day14.txt");
-        System.out.println("Day 14/1: " + day14.getSafetyFactor(101, 103, 100));
-        System.out.println("Day 14/2: " + day14.findEasterEgg(101, 103));
+        //Day14 day14 = new Day14("files/day14.txt");
+        //System.out.println("Day 14/1: " + day14.getSafetyFactor(101, 103, 100));
+        //System.out.println("Day 14/2: " + day14.findEasterEgg(101, 103));
+
+        Day15 day15 = new Day15("files/day15.txt");
+        System.out.println("Day 15/1: " + day15.sumBoxesCoordinates());
+        System.out.println("Day 15/2: " + day15.sumBoxesCoordinates(true));
     }
 }
