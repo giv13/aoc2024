@@ -58,8 +58,12 @@ public class Main {
         //System.out.println("Day 14/1: " + day14.getSafetyFactor(101, 103, 100));
         //System.out.println("Day 14/2: " + day14.findEasterEgg(101, 103));
 
-        Day15 day15 = new Day15("files/day15.txt");
-        System.out.println("Day 15/1: " + day15.sumBoxesCoordinates());
-        System.out.println("Day 15/2: " + day15.sumBoxesCoordinates(true));
+        //Day15 day15 = new Day15("files/day15.txt");
+        //System.out.println("Day 15/1: " + day15.sumBoxesCoordinates());
+        //System.out.println("Day 15/2: " + day15.sumBoxesCoordinates(true));
+
+        Day16 day16 = new Day16("files/day16.txt");
+        System.out.println("Day 16/1: " + day16.getScore());
+        System.out.println("Day 16/2: " + day16.countTiles());
     }
 }
