@@ -62,8 +62,12 @@ public class Main {
         //System.out.println("Day 15/1: " + day15.sumBoxesCoordinates());
         //System.out.println("Day 15/2: " + day15.sumBoxesCoordinates(true));
 
-        Day16 day16 = new Day16("files/day16.txt");
-        System.out.println("Day 16/1: " + day16.getScore());
-        System.out.println("Day 16/2: " + day16.countTiles());
+        //Day16 day16 = new Day16("files/day16.txt");
+        //System.out.println("Day 16/1: " + day16.getScore());
+        //System.out.println("Day 16/2: " + day16.countTiles());
+
+        Day18 day18 = new Day18("files/day18.txt");
+        System.out.println("Day 18/1: " + day18.getMinSteps(1024));
+        System.out.println("Day 18/2: " + day18.getFirstPreventingByte());
     }
 }
