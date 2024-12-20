@@ -64,12 +64,16 @@ public class Main {
         //System.out.println("Day 16/1: " + day16.getScore());
         //System.out.println("Day 16/2: " + day16.countTiles());
 
-        Day17 day17 = new Day17("files/day17.txt");
-        System.out.println("Day 17/1: " + day17.getProgramOutput());
-        System.out.println("Day 17/2: " + day17.getLowestValue());
+        //Day17 day17 = new Day17("files/day17.txt");
+        //System.out.println("Day 17/1: " + day17.getProgramOutput());
+        //System.out.println("Day 17/2: " + day17.getLowestValue());
 
         //Day18 day18 = new Day18("files/day18.txt");
         //System.out.println("Day 18/1: " + day18.getMinSteps(1024));
         //System.out.println("Day 18/2: " + day18.getFirstPreventingByte());
+
+        Day19 day19 = new Day19("files/day19.txt");
+        System.out.println("Day 19/1: " + day19.getPossibleDesigns());
+        System.out.println("Day 19/2: " + day19.getAllWays());
     }
 }
