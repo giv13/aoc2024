@@ -72,8 +72,12 @@ public class Main {
         //System.out.println("Day 18/1: " + day18.getMinSteps(1024));
         //System.out.println("Day 18/2: " + day18.getFirstPreventingByte());
 
-        Day19 day19 = new Day19("files/day19.txt");
-        System.out.println("Day 19/1: " + day19.getPossibleDesigns());
-        System.out.println("Day 19/2: " + day19.getAllWays());
+        //Day19 day19 = new Day19("files/day19.txt");
+        //System.out.println("Day 19/1: " + day19.getPossibleDesigns());
+        //System.out.println("Day 19/2: " + day19.getAllWays());
+
+        Day20 day20 = new Day20("files/day20.txt");
+        System.out.println("Day 20/1: " + day20.countCheats(100, 2));
+        System.out.println("Day 20/2: " + day20.countCheats(100, 20));
     }
 }
