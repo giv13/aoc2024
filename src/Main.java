@@ -76,8 +76,12 @@ public class Main {
         //System.out.println("Day 19/1: " + day19.getPossibleDesigns());
         //System.out.println("Day 19/2: " + day19.getAllWays());
 
-        Day20 day20 = new Day20("files/day20.txt");
-        System.out.println("Day 20/1: " + day20.countCheats(100, 2));
-        System.out.println("Day 20/2: " + day20.countCheats(100, 20));
+        //Day20 day20 = new Day20("files/day20.txt");
+        //System.out.println("Day 20/1: " + day20.countCheats(100, 2));
+        //System.out.println("Day 20/2: " + day20.countCheats(100, 20));
+
+        Day21 day21 = new Day21("files/day21.txt");
+        System.out.println("Day 21/1: " + day21.getSum(3));
+        System.out.println("Day 21/2: " + day21.getSum(26));
     }
 }
