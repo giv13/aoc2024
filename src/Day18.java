@@ -94,19 +94,20 @@ public class Day18 {
     private int runAStar(List<boolean[]> memspace) {
         Queue<Tile> queue = new PriorityQueue<>(Comparator.comparingInt(t -> t.score));
         Tile startTile = new Tile(0, 0);
+        Tile endTile = new Tile(maxRows - 1, maxCols - 1);
         queue.add(startTile);
         Map<Tile, Tile> visitedTiles = new HashMap<>();
         visitedTiles.put(startTile, startTile);
         while (!queue.isEmpty()) {
             Tile current = queue.poll();
-            if (current.row == maxRows - 1 && current.col == maxCols - 1) {
+            if (current.equals(endTile)) {
                 return current.count;
             }
             for (int[] direction : directions) {
                 int nextRow = current.row + direction[0];
                 int nextCol = current.col + direction[1];
                 if (nextRow >= 0 && nextRow < maxRows && nextCol >= 0 && nextCol < maxCols) {
-                    int nextScore = current.score + Math.abs(nextRow - current.row) + Math.abs(nextCol - current.col);
+                    int nextScore = current.score + Math.abs(nextRow - endTile.row) + Math.abs(nextCol - endTile.col);
                     Tile next = new Tile(nextRow, nextCol, nextScore, current);
                     if (!memspace.get(next.row)[next.col] && (!visitedTiles.containsKey(next) || next.score < visitedTiles.get(next).score)) {
                         queue.add(next);
