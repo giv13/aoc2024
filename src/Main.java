@@ -80,8 +80,12 @@ public class Main {
         //System.out.println("Day 20/1: " + day20.countCheats(100, 2));
         //System.out.println("Day 20/2: " + day20.countCheats(100, 20));
 
-        Day21 day21 = new Day21("files/day21.txt");
-        System.out.println("Day 21/1: " + day21.getSum(3));
-        System.out.println("Day 21/2: " + day21.getSum(26));
+        //Day21 day21 = new Day21("files/day21.txt");
+        //System.out.println("Day 21/1: " + day21.getSum(3));
+        //System.out.println("Day 21/2: " + day21.getSum(26));
+
+        Day22 day22 = new Day22("files/day22.txt");
+        System.out.println("Day 22/1: " + day22.getSum(2000));
+        System.out.println("Day 22/2: " + day22.getBananas(2000));
     }
 }
