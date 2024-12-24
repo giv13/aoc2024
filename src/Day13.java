@@ -51,7 +51,28 @@ public class Day13 {
         return countTokens(0);
     }
 
+    /**
+     * <p>a * 94 + b * 22 = 8400; a * 34 + b * 67 = 5400;</p>
+     * <p><strong>a = (8400 - b * 22) / 94;</strong></p>
+     * <p>(8400 - b * 22) / 94 * 34 + b * 67 = 5400;</p>
+     * <p>(8400 * 34 - b * 22 * 34 + b * 67 * 94) / 94 = 5400;</p>
+     * <p>8400 * 34 - b * (22 * 34 - 67 * 94) = 5400 * 94;</p>
+     * <p>8400 * 34 - 5400 * 94 = b * (22 * 34 - 67 * 94);</p>
+     * <p><strong>b = (8400 * 34 - 5400 * 94) / (22 * 34 - 67 * 94);</strong></p>
+     */
     public long countTokens(long add) {
+        return equations.stream().mapToLong(eq -> {
+            long b = ((eq.get(4) + add) * eq.get(1) - (eq.get(5) + add) * eq.get(0)) / ((long) eq.get(2) * eq.get(1) - (long) eq.get(3) * eq.get(0));
+            long a = (eq.get(4) + add - b * eq.get(2)) / eq.get(0);
+            return a > 0 && b > 0 && a * eq.get(0) + b * eq.get(2) == eq.get(4) + add && a * eq.get(1) + b * eq.get(3) == eq.get(5) + add ? a * 3 + b : 0;
+        }).sum();
+    }
+
+    public long countTokensBinarySearch() {
+        return countTokensBinarySearch(0);
+    }
+
+    public long countTokensBinarySearch(long add) {
         long result = 0;
         for (List<Integer> eq : new ArrayList<>(equations)) {
             long low = 0;
