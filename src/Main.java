@@ -88,8 +88,11 @@ public class Main {
         //System.out.println("Day 22/1: " + day22.getSum(2000));
         //System.out.println("Day 22/2: " + day22.getBananas(2000));
 
-        Day23 day23 = new Day23("files/day23.txt");
-        System.out.println("Day 23/1: " + day23.getCliques());
-        System.out.println("Day 23/2: " + day23.getMaxClique());
+        //Day23 day23 = new Day23("files/day23.txt");
+        //System.out.println("Day 23/1: " + day23.getCliques());
+        //System.out.println("Day 23/2: " + day23.getMaxClique());
+
+        Day25 day25 = new Day25("files/day25.txt");
+        System.out.println("Day 25/1: " + day25.countPairs());
     }
 }
